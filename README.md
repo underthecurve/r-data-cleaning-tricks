@@ -11,7 +11,7 @@ Data + Code for "Tricks for cleaning your data in R" at the Storytelling with Da
 
 ### Annotated code and step-by step instructions for the workshop
 * [R-datacleaning-tricks.md](https://github.com/underthecurve/r-data-cleaning-tricks/blob/master/R-datacleaning-tricks.md): Markdown file (for viewing on the web)
-* [R-datacleaning-tricks.pdf](https://github.com/underthecurve/r-data-cleaning-tricks/blob/master/R-datacleaning-tricks.pdf): Markdown file (for printing out)
+* [R-datacleaning-tricks.pdf](https://github.com/underthecurve/r-data-cleaning-tricks/blob/master/R-datacleaning-tricks.pdf): PDF file (for printing out)
 
 ### R code
 * [R-datacleaning-tricks.R](https://github.com/underthecurve/r-data-cleaning-tricks/blob/master/R-datacleaning-tricks.R): the R code, which can be run in RStudio
