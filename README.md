@@ -10,7 +10,7 @@ Data + Code for "Tricks for cleaning your data in R" at the Storytelling with Da
 ## Files included
 
 * [R-datacleaning-tricks.md](https://github.com/underthecurve/r-data-cleaning-tricks/blob/master/R-datacleaning-tricks.md): notebook with annotated code and step-by-step instructions for the workshp
-* [R-datacleaning-tricks.R](https://github.com/underthecurve/)r-data-cleaning-tricks/blob/master/R-datacleaning-tricks.R): R code
+* [R-datacleaning-tricks.R](https://github.com/underthecurve/r-data-cleaning-tricks/blob/master/R-datacleaning-tricks.R): just the R code
 * [employee-earnings-report-2016.csv](https://github.com/underthecurve/r-data-cleaning-tricks/blob/master/employee-earnings-report-2016.csv): data on earnings for Boston's municipal employees, from the city's [open data portal](https://data.boston.gov/dataset/employee-earnings-report)
 * [unemployment.xlsx](https://github.com/underthecurve/r-data-cleaning-tricks/blob/master/unemployment.xlsx): data on global unemployment rates from 2012 to 2016, from the [International Monetary Fund](https://www.imf.org/external/pubs/ft/weo/2017/01/weodata/index.aspx)
 * [attendees.csv](https://github.com/underthecurve/r-data-cleaning-tricks/blob/master/attendees.csv): data on some attendees of this workshop, with names and identifying information removed
