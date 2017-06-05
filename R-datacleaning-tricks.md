@@ -1,14 +1,15 @@
 Tricks for cleaning your data in R
 ================
 
-**By [Christine Zhang](https://twitter.com/christinezhang) (ychristinezhang at gmail dot com)**<br> *Storytelling with Data Workshop at Boston University (June 6, 2017)*
-<br><br> Data cleaning is a cumbersome task, and it can be hard to navigate in programming languages like R. When I was first learning R, I relied on familiar tools like Excel to clean my datasets before importing them into R to run statistical analyses. This approach was often not ideal because it became hard to retrace my footsteps when I wanted to check my work. I always believed it would be better to have everything in one place, so I was motivated to learn how to clean my data in R.
+**By [Christine Zhang](https://twitter.com/christinezhang) (ychristinezhang at gmail dot com)**<br>
+*Storytelling with Data Workshop at Boston University (June 6, 2017)*
+<br><br> Data cleaning is a cumbersome task, and it can be hard to navigate in programming languages like R. When I was first learning R, I relied on familiar tools like Excel to clean my datasets before importing them into R to run analyses. This approach was often not ideal because it became hard to retrace my footsteps when I wanted to check my work. I always believed it would be better to have everything in one place, so I was motivated to learn how to clean my data in R.
 
 R is a powerful tool for data cleaning and analysis. By default, it leaves a trail of code that documents all the work you've done, which makes it extremely useful for creating reproducible workflows.
 
 **In this workshop, I'll show you some examples of real-life "messy" datasets, the problems they present for analysis in R, and the "tidy" solutions to these problems.**
 
-Underlying this workshop is [Hadley Wickham](https://twitter.com/hadleywickham)'s principle of Tidy Data, which you can read about [here](http://vita.had.co.nz/papers/tidy-data.html).
+Underlying this workshop is [Hadley Wickham](http://hadley.nz/)'s principle of Tidy Data, which you can read about [here](http://vita.had.co.nz/papers/tidy-data.html).
 
 ### 1. Finding and replacing non-numeric characters like `,` and `$`
 
@@ -291,7 +292,7 @@ The Boston Police Department has a lot of high earners. We can figure out the av
 
 **Now would be a good time to introduce `%>%`, known as the pipe operator.**
 
-`%>%` is an extremely valuable tool in R, because it allows functions to be chained rather than nested. `%>` looks strange but can be read as "then"—it tells R to do whatever comes after it to the stuff comes before it.
+`%>%` is an extremely valuable tool in R, because it allows functions to be chained rather than nested. `%>%` looks strange but can be read as "then"—it tells R to do whatever comes after it to the stuff comes before it.
 
 ``` r
 salary.average <- salary.selected %>% # take the salary.selected data frame, THEN
@@ -336,7 +337,7 @@ salary.average %>% filter(department_name == 'Boston Police Department')
 
 Now we have two main datasets, `salary.sort` (the salary for each person, sorted from high to low) and `salary.average` (the average salary for each department). What if I wanted to merge these two together, so I could see side-by-side each person's salary compared to the average for their department?
 
-We want to join by the `department_name` variable, since that is consistent across both datasets. Let's a new dataset, `salary.merged`:
+We want to join by the `department_name` variable, since that is consistent across both datasets. Let's put the merged data into a new dataframe, `salary.merged`:
 
 ``` r
 salary.merged <- merge(x = salary.sort, y = salary.average, by = 'department_name')
@@ -365,7 +366,7 @@ head(salary.merged)
 
 ### 3. Reshaping data
 
-Now let's take a look at a global dataset. Here's one on unemployment rates by country from 2012 to 2016, from the International Monetary Fund's World Economic Outlook database (available [here](https://www.imf.org/external/pubs/ft/weo/2017/01/weodata/index.aspx)).
+Here's a dataset on unemployment rates by country from 2012 to 2016, from the International Monetary Fund's World Economic Outlook database (available [here](https://www.imf.org/external/pubs/ft/weo/2017/01/weodata/index.aspx)).
 
 When you download the dataset, it comes in an Excel file. We can use the `read_excel()` from the `readxl` package to load the file into R.
 
@@ -380,9 +381,9 @@ library('readxl') # load the readxl package
 unemployment <- read_excel('unemployment.xlsx')
 ```
 
-Right now, the data are in what's commonly referred to as "wide" format, meaning the variables (unemployment rate for each year) are spread across rows. This might be good for presentation, but it's not great for certain calculations or graphing. "Wide" format data also becomes confusing, especially if other variables are added.
+Right now, the data are in what's commonly referred to as "wide" format, meaning the variables (unemployment rate for each year) are spread across rows. This might be good for presentation, but it's not great for certain calculations or graphing. "Wide" format data also becomes confusing if other variables are added.
 
-We need to change the format from "wide" to "long," meaning that the columns (`2012`, `2013`, `2014`, `2015`, `2016`) sbould be converted into a new variable, which we'll call `Year`, with repeated values for each country. And the unemployment rates will be put into a new variable, which we'll call `Rate.Unemployed`.
+We need to change the format from "wide" to "long," meaning that the columns (`2012`, `2013`, `2014`, `2015`, `2016`) will be converted into a new variable, which we'll call `Year`, with repeated values for each country. And the unemployment rates will be put into a new variable, which we'll call `Rate.Unemployed`.
 
 We'd like the data to look like this:
 
@@ -461,8 +462,6 @@ str(unemployment.long) # Rate.Unemployed is now "num", which stands for "numeric
     ##  $ Country        : chr  "Albania" "Algeria" "Argentina" "Armenia" ...
     ##  $ Year           : chr  "2012" "2012" "2012" "2012" ...
     ##  $ Rate.Unemployed: num  13.4 11 7.2 17.3 5.22 ...
-
-**Exercise: How would we sort `uemployment.long` by Country, then Year using the `arrange() function in`dplyr\`?**
 
 ### 4. Calculating year-over-year change in panel data
 
@@ -562,7 +561,7 @@ tail(unemployment.long, 5)
 
 ### 5. Recoding numerical variables into categorical ones
 
-Here's a list of attendees for today's workshop, with names and contact info removed.
+Here's a list of some attendees for today's workshop, with names and contact info removed.
 
 ``` r
 attendees <- read.csv('attendees.csv', stringsAsFactors = F)
@@ -697,6 +696,6 @@ table(attendees$status)
 
 -   How would you rename the variables in the `attendees` data to make them easier to work with?
 
--   What are some other issues with this dataset that could be solved using the data cleaning tools we've learned today?
+-   What are some other issues with this dataset? How would you solve them using what we've learned?
 
 -   What are some other "messy" data issues you've encountered?
