@@ -1,12 +1,16 @@
 ########################################
-## Tricks for cleaning your data in R ##
-##    Christine Zhang  			          ##
-##     @christinezhang                ##
-##  ychristinezhang at gmail dot com  ##
+## Tricks for cleaning your data in R 
+##    Christine Zhang  			          
+##     @christinezhang                
+##  ychristinezhang at gmail dot com  
 ########################################
 
 ## Tricks for cleaning your data in R
 ## By Christine Zhang (@chrstinezhang on Twitter; ychristinezhang at gmail dot com)
+
+# Link to annotated code: 
+# https://github.com/underthecurve/r-data-cleaning-tricks/blob/master/R-datacleaning-tricks.md (markdown file for viewing on the web)
+# https://github.com/underthecurve/r-data-cleaning-tricks/blob/master/R-datacleaning-tricks.pdf (pdf file for printing out)
 
 # Before starting, ensure this .R file and the following data files are in the same folder:
 # "employee-earnings-report-2016.csv"
