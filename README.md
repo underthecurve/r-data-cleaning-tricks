@@ -25,7 +25,7 @@ Data + Code for "Tricks for cleaning your data in R" at the Storytelling with Da
 
 * You can clone or download this repository by clicking on the green button above, "Clone or download"
 * Open the `.R` file in RStudio 
-* Follow along by reading the `.md` file online by clicking the Github link above
+* Follow along by reading the `.md` file online or printing the `.pdf` file out by clicking the Github links above
 
 ## Questions / Feedback?
 
