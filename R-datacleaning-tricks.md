@@ -2,8 +2,7 @@ Tricks for cleaning your data in R
 ================
 
 **By [Christine Zhang](https://twitter.com/christinezhang) (ychristinezhang at gmail dot com)**<br>
-*Storytelling with Data Workshop at Boston University (June 6, 2017)*
-<br><br> Data cleaning is a cumbersome task, and it can be hard to navigate in programming languages like R. When I was first learning R, I relied on familiar tools like Excel to clean my datasets before importing them into R to run analyses. This approach was often not ideal because it became hard to retrace my footsteps when I wanted to check my work. I always believed it would be better to have everything in one place, so I was motivated to learn how to clean my data in R.
+*Storytelling with Data Workshop at Boston University (June 6, 2017)* <br><br> Data cleaning is a cumbersome task, and it can be hard to navigate in programming languages like R. When I was first learning R, I relied on familiar tools like Excel to clean my datasets before importing them into R to run analyses. This approach was often not ideal because it became hard to retrace my footsteps when I wanted to check my work. I always believed it would be better to have everything in one place, so I was motivated to learn how to clean my data in R.
 
 R is a powerful tool for data cleaning and analysis. By default, it leaves a trail of code that documents all the work you've done, which makes it extremely useful for creating reproducible workflows.
 
@@ -28,6 +27,8 @@ Let's take at the February 14 story from this year. The story begins:
 **What if we wanted to check this number using the Employee Earnings Report?**
 
 We can use the `read.csv()` to load the csv file into R. We will call this data frame `salary`.
+
+Note we use `stringsAsFactors = F`:
 
 ``` r
 salary <- read.csv('employee-earnings-report-2016.csv')
@@ -238,7 +239,7 @@ class(salary.selected$total.earnings) # a character, not numeric
 
     ## [1] "character"
 
-It's a 'character' now (still not numeric), because we didn't tell R that it should be numeric. We can do this with `as.numeric()`:
+It's a "character" now (still not numeric), because we didn't tell R that it should be numeric. We can do this with `as.numeric()`:
 
 ``` r
 salary.selected$total.earnings <- as.numeric(salary.selected$total.earnings)
