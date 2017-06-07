@@ -238,7 +238,7 @@ class(salary.selected$total.earnings) # a character, not numeric
 
     ## [1] "character"
 
-It's still a factor, because we never told R that it should be numeric. We can do this with `as.numeric()`:
+It's a 'character' now (still not numeric), because we didn't tell R that it should be numeric. We can do this with `as.numeric()`:
 
 ``` r
 salary.selected$total.earnings <- as.numeric(salary.selected$total.earnings)
