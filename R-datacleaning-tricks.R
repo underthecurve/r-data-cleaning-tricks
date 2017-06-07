@@ -6,7 +6,7 @@
 ########################################
 
 ## Tricks for cleaning your data in R
-## By Christine Zhang (@chrstinezhang on Twitter; ychristinezhang at gmail dot com)
+## By Christine Zhang (@christinezhang on Twitter; ychristinezhang at gmail dot com)
 
 # Link to annotated code: 
 # https://github.com/underthecurve/r-data-cleaning-tricks/blob/master/R-datacleaning-tricks.md (markdown file for viewing on the web)
