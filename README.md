@@ -1,8 +1,8 @@
 # Tricks for cleaning your data in R
 
-Data + Code for "Tricks for cleaning your data in R" at the [Storytelling with Data](https://www.bu.edu/com/data-storytelling/) workshop at Boston University on Tuesday, June 6th 2017.
+Data + Code for **"Tricks for cleaning your data in R"** at the [Storytelling with Data](https://www.bu.edu/com/data-storytelling/) workshop at Boston University on Tuesday, June 6th 2017.
 
-Equivalent materials for "Advancing with data visualization in R using ggplot2" available [here](https://github.com/underthecurve/r-dataviz-ggplot2).
+Equivalent materials for **"Advancing with data visualization in R using ggplot2"** available [here](https://github.com/underthecurve/r-dataviz-ggplot2).
 
 ## Links to install R and RStudio
 
