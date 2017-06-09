@@ -2,7 +2,11 @@ Tricks for cleaning your data in R
 ================
 
 **By [Christine Zhang](https://twitter.com/christinezhang) (ychristinezhang at gmail dot com)**
-*Storytelling with Data Workshop at Boston University (June 6, 2017)* <br><br> Data cleaning is a cumbersome task, and it can be hard to navigate in programming languages like R. When I was first learning R, I relied on familiar tools like Excel to clean my datasets before importing them into R to run analyses. This approach was often not ideal because it became hard to retrace my footsteps when I wanted to check my work. I always believed it would be better to have everything in one place, so I was motivated to learn how to clean my data in R.
+*Storytelling with Data Workshop at Boston University (June 6, 2017)* <br><br>
+
+\*GitHub repository for Data+Code: <https://github.com/underthecurve/r-data-cleaning-tricks*>
+
+Data cleaning is a cumbersome task, and it can be hard to navigate in programming languages like R. When I was first learning R, I relied on familiar tools like Excel to clean my datasets before importing them into R to run analyses. This approach was often not ideal because it became hard to retrace my footsteps when I wanted to check my work. I always believed it would be better to have everything in one place, so I was motivated to learn how to clean my data in R.
 
 R is a powerful tool for data cleaning and analysis. By default, it leaves a trail of code that documents all the work you've done, which makes it extremely useful for creating reproducible workflows.
 
@@ -62,7 +66,7 @@ head(salary)
 
 There are a lot of columns. Let's simplify by selecting the ones of interest: `NAME`, `DEPARTMENT_NAME`, and `TOTAL.EARNINGS`. We can do this using the `select()` function in `dplyr`. We will save them into a new data frame, `salary.selected`.
 
-We load the `dplyr` pacakge using `library('dplyr')`:
+We load the `dplyr` package using `library('dplyr')`:
 
 ``` r
 # install.packages('dplyr') # if you don't already have the package
@@ -129,7 +133,7 @@ We need to find the `,` and `$` in `total.earnings` and remove them—in compute
 
 Let's start by removing the comma and write the result to the original column. (The format for calling a column from a data frame in R is `data frame.name$column.name`)
 
-We load the `stringr` pacakge using `library('stringr')`:
+We load the `stringr` package using `library('stringr')`:
 
 ``` r
 # install.packages('stringr') # if you don't already have the package
@@ -369,7 +373,7 @@ Here's a dataset on unemployment rates by country from 2012 to 2016, from the In
 
 When you download the dataset, it comes in an Excel file. We can use the `read_excel()` from the `readxl` package to load the file into R.
 
-We load the `readxl` pacakge using `library('readxl')`:
+We load the `readxl` package using `library('readxl')`:
 
 ``` r
 # install.packages('readxl') # if you don't already have the package
@@ -402,7 +406,7 @@ We'd like the data to look like this:
 
 To do this, we'll use the `gather()` function in `tidyr` to create a new data frame, `unemployment.long`.
 
-We load the `tidyr` pacakge using `library('tidyr')`:
+We load the `tidyr` package using `library('tidyr')`:
 
 ``` r
 # install.packages('tidyr')
