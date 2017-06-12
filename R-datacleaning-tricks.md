@@ -4,7 +4,7 @@ Tricks for cleaning your data in R
 **By [Christine Zhang](https://twitter.com/christinezhang) (ychristinezhang at gmail dot com)**
 *Storytelling with Data Workshop at Boston University (June 6, 2017)* <br><br>
 
-\*GitHub repository for Data+Code: <https://github.com/underthecurve/r-data-cleaning-tricks*>
+GitHub repository for Data+Code: <https://github.com/underthecurve/r-data-cleaning-tricks>
 
 Data cleaning is a cumbersome task, and it can be hard to navigate in programming languages like R. When I was first learning R, I relied on familiar tools like Excel to clean my datasets before importing them into R to run analyses. This approach was often not ideal because it became hard to retrace my footsteps when I wanted to check my work. I always believed it would be better to have everything in one place, so I was motivated to learn how to clean my data in R.
 
